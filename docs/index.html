@@ -19,8 +19,9 @@
         <div id="home" class="view" view="0">
             <div class="topbar"><button class="btn btn-light trigger-sidebar-btn" type="button"><i class="fas fa-bars"></i></button></div>
             <div class="container menu-container">
-                <h1 class="text-center">Sudoku</h1><button class="btn btn-light btn-block btn-lg" type="button" difficulty="easy">Easy</button><button class="btn btn-light btn-block btn-lg" type="button" difficulty="medium">Medium</button><button class="btn btn-light btn-block btn-lg"
-                    type="button" difficulty="hard">Hard</button><button class="btn btn-light btn-block btn-lg" type="button" difficulty="very-hard">Expert</button><button class="btn btn-light btn-block btn-lg" type="button" difficulty="insane">Insane</button></div>
+                <h1 class="text-center">Sudoku</h1><button class="btn btn-light btn-block btn-lg" type="button" difficulty="easy">Easy<span>0/40</span></button><button class="btn btn-light btn-block btn-lg" type="button" difficulty="medium">Medium<span>0/40</span></button>
+                <button
+                    class="btn btn-light btn-block btn-lg" type="button" difficulty="hard">Hard<span>0/40</span></button><button class="btn btn-light btn-block btn-lg" type="button" difficulty="very-hard">Expert<span>0/40</span></button><button class="btn btn-light btn-block btn-lg" type="button" difficulty="insane">Insane<span>0/40</span></button></div>
         </div>
         <div id="puzzles" class="view" view="1">
             <div class="topbar"><button class="btn btn-light return-btn" type="button" gotoview="0"><i class="fas fa-chevron-left"></i></button><button class="btn btn-light trigger-sidebar-btn" type="button"><i class="fas fa-bars"></i></button></div>
@@ -30,8 +31,9 @@
             </div>
         </div>
         <div id="game" class="view" view="2">
-            <div class="topbar"><button class="btn btn-light return-btn" type="button" gotoview="1"><i class="fas fa-chevron-left"></i></button><button class="btn btn-light trigger-sidebar-btn" type="button"><i class="fas fa-bars"></i></button></div>
-            <div class="container text-center">
+            <div class="topbar"><button class="btn btn-light return-btn" type="button" gotoview="1"><i class="fas fa-chevron-left"></i></button><button class="btn btn-light trigger-sidebar-btn" type="button"><i class="fas fa-bars"></i></button><span class="timer-block">00:00</span></div>
+            <div
+                class="container game-container text-center">
                 <div class="sudoku-base-outer">
                     <div class="sudoku-base">
                         <div class="sudoku-base-cell">
@@ -135,11 +137,23 @@
                         </div>
                     </div>
                 </div>
+        </div>
+        <div class="input-bar nodrag">
+            <div class="tool-bar"><a id="undo" href="#"><i class="fas fa-undo"></i><span>Undo</span></a><a id="erase" href="#"><i class="fas fa-eraser"></i><span>Erase</span></a><a id="timer-toggle" href="#"><i class="fas fa-pause"></i><span>Pause</span></a><a id="hint" href="#"><i class="far fa-lightbulb"></i><span>Hint</span></a></div>
+            <div
+                class="number-bar"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a></div>
+    </div>
+    </div>
+    <div id="results" class="view" view="3">
+        <div class="topbar"></div>
+        <div class="container text-center results-container"><img src="https://www.prestige-carriages.co.uk/wordpress/wp-content/uploads/2018/05/check-mark-animated-gif-12.gif" loop="False">
+            <h3 class="text-center">Solved!</h3>
+            <div class="inner clearfix"><span class="results-time"><strong>00:00</strong><span class="text-right left-prefix">Time:</span></span>
             </div>
-            <div class="input-bar nodrag">
-                <div class="tool-bar"><a id="undo" href="#"><i class="fas fa-undo"></i><span>Undo</span></a><a id="erase" href="#"><i class="fas fa-eraser"></i><span>Erase</span></a><a href="#"><i class="fas fa-pause"></i><span>Pause</span></a><a id="hint" href="#"><i class="far fa-lightbulb"></i><span>Hint</span></a></div>
-                <div
-                    class="number-bar"><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a></div>
+            <div class="inner clearfix"><span class="results-time-best"><strong>00:00</strong><span class="text-right left-prefix">Best Time:</span></span>
+            </div>
+            <div class="button-container"><button class="btn btn-primary btn-block btn-lg" id="next-puzzle" type="button">Next Puzzle</button><button class="btn btn-info btn-block" id="view-puzzle" type="button">View Puzzle</button><button class="btn btn-secondary btn-block" id="main-menu"
+                    type="button">Main Menu</button></div>
         </div>
     </div>
     </div>
