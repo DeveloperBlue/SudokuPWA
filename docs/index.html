@@ -4,17 +4,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>SudokuPWA</title>
+    <title>Sudoku</title>
+    <meta name="twitter:description" content="Sudoku Progressive Web Application - Play dozens of different sudoku puzzles from a variety of levels right from your home screen!">
+    <meta name="twitter:image" content="assets/img/sudoku-icon-temp.png">
+    <meta name="description" content="Sudoku Progressive Web Application - Play dozens of different sudoku puzzles from a variety of levels right from your home screen!">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sudoku">
     <meta name="theme-color" content="#eee">
-    <link rel="icon" type="image/png" sizes="undefinedxundefined" href="assets/img/sudoku-icon-temp.png">
+    <link rel="icon" type="image/png" sizes="225x225" href="assets/img/sudoku-icon-temp.png">
+    <link rel="icon" type="image/png" sizes="225x225" href="assets/img/sudoku-icon-temp.png">
+    <link rel="icon" type="image/png" sizes="225x225" href="assets/img/sudoku-icon-temp.png">
+    <link rel="icon" type="image/png" sizes="225x225" href="assets/img/sudoku-icon-temp.png">
+    <link rel="icon" type="image/png" sizes="225x225" href="assets/img/sudoku-icon-temp.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76476506-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76476506-6');
+</script>
+
 </head>
 
 <body class="noselect">
+    <!-- Start: Views -->
     <div class="view-container">
         <div id="home" class="view" view="0">
             <div class="topbar"><button class="btn btn-light trigger-sidebar-btn" type="button"><i class="fas fa-bars"></i></button></div>
@@ -157,17 +178,23 @@
         </div>
     </div>
     </div>
-    <div class="sidebar-container right">
-        <div class="sidebar right">
-            <div class="topbar"><button class="btn btn-outline-dark collapse-btn" type="button"><i class="fa fa-chevron-right"></i></button></div><button class="btn btn-light" type="button">Theme<i class="fas fa-palette"></i></button><button class="btn btn-light" type="button">Options<i class="fas fa-cog"></i></button>
-            <button
-                class="btn btn-light" type="button">Get Hints<i class="fab fa-adversal"></i></button>
-                <div class="divider"></div><button class="btn btn-light" id="restart" type="button" disabled="">Restart Puzzle<i class="fas fa-sync"></i></button><button class="btn btn-light" id="solve" type="button" disabled="">Solve Puzzle<i class="fas fa-key"></i></button>
-                <div
-                    class="divider"></div><button class="btn btn-light" type="button">About<i class="fas fa-info-circle"></i></button><button class="btn btn-light" type="button">Share<i class="fas fa-share-alt"></i></button></div>
+    <!-- End: Views -->
+    <!-- Start: Sidebar -->
+    <div class="sidebar-container right sidebar-shadow">
+        <div id="sidebar-panel" class="sidebar right sidebar-shadow" view="0">
+            <div class="topbar"><button class="btn btn-outline-dark collapse-btn" type="button"><i class="fa fa-chevron-right"></i></button></div><button class="btn btn-light" id="theme" type="button">Theme<i class="fas fa-palette"></i></button><button class="btn btn-light"
+                type="button">Options<i class="fas fa-cog"></i></button><button class="btn btn-light" type="button">Get Hints<i class="fab fa-adversal"></i></button>
+            <div class="divider"></div><button class="btn btn-light" id="restart" type="button" disabled="">Restart Puzzle<i class="fas fa-sync"></i></button><button class="btn btn-light" id="solve" type="button" disabled="">Solve Puzzle<i class="fas fa-key"></i></button>
+            <div
+                class="divider"></div><button class="btn btn-light" type="button">About<i class="fas fa-info-circle"></i></button><button class="btn btn-light" type="button">Share<i class="fas fa-share-alt"></i></button></div>
+    <div id="themes" class="view" view="1">
+        <div class="topbar"><button class="btn btn-light return-btn" type="button" gotoview="1"><i class="fas fa-chevron-left"></i></button></div>
     </div>
+    </div>
+    <!-- End: Sidebar -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/idb-keyval@3/dist/idb-keyval-iife.min.js"></script>
     <script src="assets/js/script.min.js"></script>
 </body>
 
